@@ -1,0 +1,25 @@
+{
+  "this_term": "Fall 2020",
+  "instructor": {
+    "name": "David I.W. Levin",
+    "website": "http://www.cs.toronto.edu/~diwlevin/",
+    "email": "diwlevin@cs.toronto.edu",
+    "phone": "+1 416-978-2052"
+  },
+  "office_hours": {
+      "day": "Tuesday/Wednesday",
+      "timeslot": "5-6pm",
+      "location": "Zoom"
+  },
+  "markus_link": "https://markus.teach.cs.toronto.edu/csc418-2020-01/",
+  "schedule": {
+    "A1_due": {
+      "year": 2020,
+      "month": 9,
+      "day": 17
+    }, 
+    "midterm": "Monday, October 28",
+    "drop_date": "Monday, November 9",
+    "reading_week": "November 9-13"
+  }
+}
