@@ -3,10 +3,7 @@ import json
 from template_physics import template
 from datetime import date, timedelta
 
-def reset_readme():
-    with open('setting_cg.json', 'r') as f:
-        setting_dict = json.load(f)
-
+def reset_readme(setting_dict):
     for setting in setting_dict:
         print(setting)
 
@@ -35,7 +32,4 @@ def reset_readme():
     with open('course_readme/csc2549_readme.md','w') as myfile:
         myfile.write(template.format(**context))
 
-
-if __name__ == '__reset_readme__':
-    reset_readme()
 

@@ -2,6 +2,7 @@ from __future__ import print_function
 import pickle
 import os.path
 import sys
+import json
 
 # github stuff
 import getpass
@@ -40,12 +41,16 @@ def main():
         repo.delete_file(old_slide.path, "remove old slide", old_slide.sha, branch=old_branch)
 
     # reset readme locally
-    reset_readme()
+    with open('setting_cg.json', 'r') as f:
+        setting_dict = json.load(f)
+    reset_readme(setting_dict)
     # update readme in the repo
     readme = repo.get_contents("README.md", ref=old_branch)
     readme_contents = open("course_readme/csc418_readme.md").read()
     repo.update_file(readme.path, "update readme", readme_contents, readme.sha, branch=old_branch)
 
+    for new_collaborator in setting_dict['collaborators']:
+        repo.add_to_collaborators(new_collaborator, 'admin')
 
 if __name__ == '__main__':
     main()

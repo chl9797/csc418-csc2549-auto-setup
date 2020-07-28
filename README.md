@@ -1,4 +1,4 @@
-# csc418-auto-setup
+# csc418-csc2549-auto-setup
 
 This python script updates the schedules (and other information) on the course pages of CSC418 and CSC2549 at University of Toronto.
 
